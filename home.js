@@ -10,4 +10,5 @@ function GetOutput(num) {
         return"Prime"
     }
 }
+
 console.log(GetOutput(num))
