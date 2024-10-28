@@ -1,14 +1,14 @@
-let num = 4
+let num = 9
 function GetOutput(num) {
     if(num<2){
         return "Prime Number"
     }
-    if(num%2==0){
-        return "Not Prime Number"
+    for(let i=0;i<=num;i++){
+        if(num%i==0){
+            return "Not Prime Number"
+        }
     }
-    else{
-        return"Prime"
-    }
+    return "Prime Number"
 }
-
-console.log(GetOutput(num))
+console.log("Input Number: ", num)
+console.log("Output: ", GetOutput(num)) 
