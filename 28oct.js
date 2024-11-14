@@ -36,7 +36,7 @@
 //     let n = arr.length;
 //     for (let i = 0; i < n - 1; i++) {
 //         for (let j = 0; j < n - i - 1; j++) {
-//             if (arr[j] > arr[j + 1]) {
+//             if (arr[j] > arr[j + 1   ]) {
 //                 let temp = arr[j]
 //                 arr[j] = arr[j + 1]
 //                 arr[j + 1] = temp
@@ -51,9 +51,34 @@
 // console.log(sorted_array);
 //Q5
 let arr = [1,2,43,5,6,67]
-let sum = arr.reduce((a,b)=>a+b,0)
+let su1m = arr.reduce((a,b)=>a+b,0)
+let sum = arr.reduce((a,b)=>a+b,)
 console.log(sum); 
+console.log(su1m);
+//Q6
+let arr1 = [90,45,74,23,88,11,10,43]
+console.log(arr1);
+function Selection_Sort(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n - 1; i++) {
+        let min = i;
+        for (let j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min]) {
+                min = j;
+                }
+            }
+            let temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;  
+            console.log(arr);    
+              
+        }
+        return arr;
+   
+}
 
+let sorted_array = Selection_Sort(arr1)
+console.log(sorted_array);
 
 
 
