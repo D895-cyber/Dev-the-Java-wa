@@ -36,4 +36,4 @@ calculatePercentageAndLowest(marks);
 let arr1 =[89,32,54,23,52]
 
 let sum = arr1.reduce((a,b)=>a*b,1) 
-console.log(sum);
+console.log(sum);x  
