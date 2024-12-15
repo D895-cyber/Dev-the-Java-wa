@@ -1,5 +1,5 @@
 //array function 
-// let arr = [3,4,5,5,6,6,6,6,67,78,23]
+// let arr = [3,4,5,5,6,6,6,6,67,78,23] 
 // let newarr =arr.slice(2,3);
 // console.log(newarr);
 
@@ -28,7 +28,6 @@
 //     console.log(val,index);
 // })
 
-
 // let arr1= [1,2,3,4,5,6,7]
 // let arrnew = arr1.reduce((acc,val,index,arr1)=>{
 //     return acc+=val
@@ -47,5 +46,5 @@
 // console.log(evenfil);  //filter() method returns a new array with all elements that pass
 
 
-let findarr = [12,43,65,34,55,77,30,12]
+let findarr = [10,20,30,40,50,77]
 console.log(findarr.find((val,index)=>val===77));

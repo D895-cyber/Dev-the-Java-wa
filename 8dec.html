@@ -1,0 +1,156 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="Counter-Value">0</h1>
+        <button id="decrement">decrement</button>
+        <button id="increment">increment</button>
+        <button id="reset">reset</button>
+
+    </div>
+    <script>
+        const counterValue = document.getElementById("Counter-Value")
+        const decrementButton = document.getElementById("decrement")
+        const incrementButton = document.getElementById("increment")
+        const resetButton = document.getElementById("reset")
+        let counter = 0;
+        decrementButton.addEventListener("click", () => {
+            if(counter==0){
+                alert("Counter is already at 0")
+            }
+            else{
+                counter--;
+                updateCount()
+            }  
+        })
+        incrementButton.addEventListener("click", () => {
+            counter++;
+            updateCount()
+        })
+        resetButton.addEventListener("click", () => {
+            counter=0;
+            updateCount()
+        })  
+        function updateCount(){
+            counterValue.textContent = counter;
+        }
+    </script>
+</body>
+</html>  -->
+
+<!-- //stop wacth
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Stop wacth</h1>
+        <div class="timer"> 00:00:00</div>
+        <div class="buttons">
+            <button id="start">start</button>
+            <button id="stop">stop</button>
+            <button id="reset">reset</button>
+        </div>
+    </div>
+    <script>
+        let timeDisplay = document.querySelector(".timer")
+        let startBtn = document.querySelector("#start");
+        let stopBtn = document.querySelector("#stop");
+        let resetBtn = document.querySelector("#reset");
+        let timer = null 
+        let [hours,minutes,seconds] = [0,0,0]
+        function UpdateDisplay() {
+            let h = hours <10?`0${hours}`:hours
+            let m = minutes <10?`0${minutes}`:minutes
+            let s = seconds <10?`0${seconds}`:seconds
+            timeDisplay.textContent = `${h}:${m}:${s}`
+            
+        }
+        function startTimer() {
+            if(timer!==null) return;
+            timer = setInterval(() => {
+                seconds++;
+                if(seconds===60){
+                    seconds=0;
+                }
+                if(minutes===60){
+                    minutes=0;
+                    hours++;
+
+                }
+                UpdateDisplay();
+            },1000)
+        }
+        function stopTimer(){
+            clearInterval(timer);
+            timer = null;
+        }
+        function resetTimer(){
+            clearInterval(timer);
+            timer = null;
+            [hours,minutes,seconds] = [0,0,0];
+            UpdateDisplay();
+        }
+        startBtn.addEventListener("click",startTimer)
+        stopBtn.addEventListener("click",stopTimer)
+        resetBtn.addEventListener("click",resetTimer)
+    </script>
+</body>
+</html> -->
+
+<!-- // color Picker 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Colour Picker</h1>
+    <input type="color" id="color-input" value="#ff0000">
+    <p id="color-value">#ffff</p>
+    <script>
+        let colorInput = document.getElementById('color-input');
+        let colorValue = document.getElementById('color-value');
+        colorInput.addEventListener('input', (event) => {
+            const color = event.target.value;
+            document.body.style.backgroundColor = color;
+            colorValue.textContent = colorInput.value;
+        })
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>color picker</h1>
+    <input type="color" id="color-input">
+    <p id="color-value">#ffff</p>
+    <script>
+        let colorInput = document.getElementById("color-input");
+        let colorValue = document.getElementById("color-value");
+        colorInput.addEventListener("input", (event) => {
+            const color = event.target.value
+            document.body.style.backgroundColor = color;
+            colorValue.textContent = colorInput.value;
+        });
+    </script>
+    
+</body>
+</html>
